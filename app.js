@@ -9,4 +9,4 @@ app.use(articleRoutes);
 
 const server = http.createServer(app);
 
-server.listen(8080);
+server.listen(process.env.PORT || 80);
