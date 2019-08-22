@@ -6,7 +6,9 @@ const uri = 'mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?ret
 let _db;
 
 const mongoConnect = callback => {
-    MongoClient.connect('mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true } )
+                        
+                        //mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?retryWrites=true&w=majority
+    MongoClient.connect('mongodb+srv://atilla:mardin_001@cluster0-7oxvq.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true } )
     .then(client => {
         console.log('ABNET DB: Connected');
         _db = client.db();
