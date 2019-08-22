@@ -1,5 +1,6 @@
 const http = require('http');
 const express = require('express');
+const mongoConnect = require('./utils/database').mongoConnect;
 
 const app = express();
 
@@ -9,4 +10,8 @@ app.use(articleRoutes);
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || 8000);
+
+mongoConnect(
+  server.listen(process.env.PORT || 8000)
+);
+
