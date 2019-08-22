@@ -1,6 +1,6 @@
 const getDB = require('./utils/database').getDB;
 
-class Article {
+export class Article {
     constructor(name, author, content) {
         this.name = name;
         this.author = author;
@@ -9,7 +9,7 @@ class Article {
 
     save() {
         const db = getDB();
-        db.collection('articles').insertOne(this)
+        return db.collection('articles').insertOne(this)
         .then(result => {
             console.log(result);
         }).catch(err => {
@@ -17,3 +17,5 @@ class Article {
         });
     }
 }
+
+exports.Article = Article;
