@@ -11,9 +11,9 @@ class Article {
         const db = getDB();
         return db.collection('articles').insertOne(this)
         .then(result => {
-            console.log(result);
+            console.log('Article success', result);
         }).catch(err => {
-            console.log(err);
+            console.log('Article Err', err);
         });
     }
 }

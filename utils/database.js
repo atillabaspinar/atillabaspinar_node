@@ -8,11 +8,11 @@ let _db;
 const mongoConnect = callback => {
     MongoClient.connect('mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true } )
     .then(client => {
-        console.log('DB: Connected');
+        console.log('ABNET DB: Connected');
         _db = client.db();
         callback();
     }).catch(err => {
-        console.log("DB Error", err);
+        console.log("ABNET DB Error", err);
         throw err;
     });
 };
