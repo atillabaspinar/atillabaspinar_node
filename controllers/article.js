@@ -12,6 +12,8 @@ exports.postArticles = (req, res, next) => {
 };
 
 exports.postAddArticle = (res, req, next) => {
+    
     const article = new Article('deneme', 'user1', '<div>hello</div');
+    console.log('postAddArticle called with ', article);
     article.save();
 }
