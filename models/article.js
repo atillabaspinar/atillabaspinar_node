@@ -1,6 +1,6 @@
-const getDB = require('./utils/database').getDB;
+const getDB = require('../utils/database').getDb;
 
-export class Article {
+class Article {
     constructor(name, author, content) {
         this.name = name;
         this.author = author;
