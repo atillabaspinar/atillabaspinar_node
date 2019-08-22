@@ -1,13 +1,9 @@
 const mongodb = require('mongodb');
 const MongoClient =mongodb.MongoClient;
 
-const uri = 'mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?retryWrites=true&w=majority';
-
 let _db;
 
-const mongoConnect = callback => {
-                        
-                        //mongodb+srv://atilla:mardin_001@cluster0-7oxvq.mongodb.net/test?retryWrites=true&w=majority
+const mongoConnect = callback => {                    
     MongoClient.connect('mongodb+srv://atilla:mardin_001@cluster0-7oxvq.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true } )
     .then(client => {
         console.log('ABNET DB: Connected');
